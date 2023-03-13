@@ -6,10 +6,10 @@ on:
   pull_request:
     branches: [main]
     
-  permissions:
+permissions:
     contents: write
   
-  jobs:
+jobs:
     export-fromdev:
       runs-on: windows-latest
       env: 
