@@ -10,7 +10,7 @@ permissions:
     contents: write
   
 jobs:
-    export-fromdev:
+    export-from-dev:
       runs-on: windows-latest
       env: 
        runner_debug: 1
