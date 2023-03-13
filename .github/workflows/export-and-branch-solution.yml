@@ -37,7 +37,7 @@ jobs:
          Solution-output-file: out/exported/ALMLab.ip
          
       - name: unpack-solution action
-        uses: microsoft/powerplatform-actions/unpack-solution@vo
+        uses: microsoft/powerplatform-actions/unpack-solution@v0
         with:
          solution-file: out/exported/ALMLab.zip
          solution-folder: out/solutions/ALMLab
