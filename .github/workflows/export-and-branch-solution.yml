@@ -34,7 +34,7 @@ jobs:
          user-name: '<USER NAME>'
          password-secret: $ {{secrets.password}}
          solution-name: ALMLab
-         Solution-output-file: out/exported/ALMLab.ip
+         Solution-output-file: out/exported/ALMLab.zip
          
       - name: unpack-solution action
         uses: microsoft/powerplatform-actions/unpack-solution@v0
