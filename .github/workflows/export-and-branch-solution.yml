@@ -23,32 +23,32 @@ jobs:
       - name: who-am-i action
         uses: microsoft/powerplatform-actions/who-am-i@v0
         with:
-         environment-url: '<ENV URL>'
-         user-name: '<USER NAME>'
+         environment-url: 'https://org46039522.crm.dynamics.com/'
+         user-name: 'j.kumar.sahoo@accenture.com'
          password-secret: ${{secrets.password}}
          
       - name: export-solution action
         uses: microsoft/powerplatform-actions/export-solution@v0
         with:
-         environment-url: '<ENV URL>'
-         user-name: '<USER NAME>'
+         environment-url: 'https://org46039522.crm.dynamics.com/'
+         user-name: 'j.kumar.sahoo@accenture.com'
          password-secret: $ {{secrets.password}}
-         solution-name: ALMLab
-         Solution-output-file: out/exported/ALMLab.zip
+         solution-name: JitenTestApp
+         Solution-output-file: out/exported/JitenTestApp.zip
          
       - name: unpack-solution action
         uses: microsoft/powerplatform-actions/unpack-solution@v0
         with:
          solution-file: out/exported/ALMLab.zip
-         solution-folder: out/solutions/ALMLab
+         solution-folder: out/solutions/JitenTestApp
          solution-type: 'unmanaged'
          overwrite-files: true
          
       - name: branch-solution, prepare it for Pull Request action
         uses: microsoft/powerplatform-actions/branch-solution@v0
         with:
-          solution-folder: out/solutions/ALMLab
-          solution-target-folder: solutions/ALMLab
+          solution-folder: out/solutions/JitenTestApp
+          solution-target-folder: solutions/JitenTestApp
           repo-token: ${{secrets.GITHUB_TOKEN}}
           allow-empty-commit: true
         
