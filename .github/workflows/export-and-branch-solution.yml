@@ -25,21 +25,21 @@ jobs:
         with:
          environment-url: 'https://org46039522.crm.dynamics.com/'
          user-name: 'j.kumar.sahoo@accenture.com'
-         password-secret: ${{secrets.password}}
+         password-secret: ${{ secrets.password }}
          
       - name: export-solution action
         uses: microsoft/powerplatform-actions/export-solution@v0
         with:
          environment-url: 'https://org46039522.crm.dynamics.com/'
          user-name: 'j.kumar.sahoo@accenture.com'
-         password-secret: $ {{secrets.password}}
+         password-secret: ${{ secrets.password }}
          solution-name: JitenTestApp
          Solution-output-file: out/exported/JitenTestApp.zip
          
       - name: unpack-solution action
         uses: microsoft/powerplatform-actions/unpack-solution@v0
         with:
-         solution-file: out/exported/ALMLab.zip
+         solution-file: out/exported/JitenTestApp.zip
          solution-folder: out/solutions/JitenTestApp
          solution-type: 'unmanaged'
          overwrite-files: true
